@@ -1,0 +1,182 @@
+h1 {
+	cursor: default;
+}
+
+h3 {
+	margin: 5px;
+	float: left;
+
+}
+
+input {
+	display: inline-block;
+	width: 32px;
+	margin-left: 10px;
+	opacity: 0.5;
+	font-weight: bold;
+}
+
+p {
+	background-color: rgba(256, 256, 256, 0.5);
+}
+
+ul {
+	display: inline-grid;
+	cursor: pointer;
+	font-weight: bold;
+	min-width: 82px;
+	margin-right: 0px;
+}
+
+li {
+	list-style: none;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+li:hover {
+	font-weight: bold;
+}
+
+span {
+	background-color: rgb(256, 256, 256, 0.5);
+}
+
+.hidden {
+	display: none;
+}
+
+.hiddenDiv {
+	display: none;
+}
+
+.active {
+	display: list-item;
+}
+
+.enemy {
+	padding: 5px;
+	width: 220px;
+	display: inline-block;
+	margin: 3px;
+	border: solid 3px #000;
+}
+
+.enemy span {
+	display: inline-block;
+	width: 40px;
+	margin-left: 10px;
+
+}
+
+.enemy button {
+	padding-bottom: 2px;
+	padding-top: 2px;
+	font-weight: bolder;
+	font-size: 12px;
+	display: list-item;
+	margin-left: 5px;
+	margin: 1px;
+	background-color: #fff;
+	border-color: #ccc;
+	color: #333;
+	width: 90px;
+}
+
+.enemy button:hover {
+ 	background-color: #666;
+ 	border-color: #333;
+ 	cursor: pointer;
+ 	color: #fff;
+}
+
+.hitstatsDiv {
+	display: inline-block;
+}
+
+.atkDiv {
+	width: 100%;
+	height: 120px;
+	background-color: rgb(256, 256, 256, 0.75);
+	border: solid 1px #000;
+}
+
+.delete {
+	cursor: pointer;
+	float: right;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	color: #000;
+}
+
+.toggleBtn {
+	cursor: pointer;
+	font-weight: bold;
+	width: 24px;
+	height: 28px;
+	text-align: center;
+	color: #fff;
+	font-size: 26px;
+	background-color: rgb(0, 0, 0, 1);
+	border-radius: 5px 5px 5px 5px;
+}
+
+.noticeBoard {
+	max-width: 98%;
+	width: 98%;
+	min-width: 55px;
+	min-height: 10%;
+	height: 80px;
+}
+
+#mod {
+	margin-left: 110px;
+}
+
+#menu {
+	display: inline-block;
+}
+
+#firstStack {
+	display: inline-block;
+	list-style: none;
+}
+
+#firstStack ul {
+	margin-left: 30px;
+}
+
+#firstStackSpan {
+	display: inline-block;
+	font-weight: bold;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+#secondStackSpan {
+	display: inline-block;
+	font-weight: bold;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+#secondStack ul {
+	margin-left: 30px;
+}
+
+#secondStack {
+	display: inline-block;
+	list-style: none;
+}
+
+#rollDice:hover {
+	cursor: pointer;
+}
+
+#search {
+	width: 12%;
+	border: solid 1px #000;
+	margin-bottom: 1%;
+}
+

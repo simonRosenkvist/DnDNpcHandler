@@ -1,0 +1,49 @@
+.pteranodon {
+	vertical-align: top;
+	background-image: url('../pic/quarter/pteranodon.jpg');
+	background-repeat: no-repeat;
+	background-position: 30% 0%;
+	background-size: 460px 640px;
+	padding: 5px;
+	width: 220px;
+	display: inline-block;
+	margin: 3px;
+	border: solid 3px #000;
+}
+
+.pteranodon span {
+	display: inline-block;
+	width: 40px;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+
+.pteranodon button {
+	padding-bottom: 2px;
+	padding-top: 2px;
+	font-weight: bolder;
+	font-size: 12px;
+	display: list-item;
+	margin-left: 5px;
+	margin: 1px;
+	background-color: #fff;
+	border-color: #ccc;
+	color: #333;
+	width: 90px;
+}
+
+.pteranodon button:hover {
+ 	background-color: #666;
+ 	border-color: #333;
+ 	cursor: pointer;
+ 	color: #fff;
+}
+
+.hitstatsDiv {
+	display: inline-block;
+}
+
+.pteranodon .atkDiv {
+	height: 160px;
+}

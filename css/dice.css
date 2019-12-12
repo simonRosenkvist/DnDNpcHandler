@@ -1,0 +1,87 @@
+
+#rollDice {
+	width: 48px;
+	height: 48px;
+}
+
+.diceBoard {
+	border-style: solid;
+	border-size: 1px;
+	border-color: #000;
+	background-image: url(../pic/misc/diceBgTwo.png);
+	background-repeat: no-repeat;
+	background-position: 10% 40%;
+	background-size: 100% 110%;
+	width: 20%;
+	height: 20%;
+	min-height: 80px;
+	min-width: 240px;
+	display: inline-block;
+}
+
+.diceBoard span {
+	background-color: rgb(230, 5, 5, 1);
+}
+
+
+.diceBoard button {
+	background-color: rgb(230, 5, 5, 1);
+	color: #fff;
+	font-weight: bold;
+	border-color: #522;
+	display: list-item;
+	width: 80px;
+	height: 25px;
+	margin: 1px;
+}
+
+.diceBoard button:hover {
+	background-color: rgb(175, 5, 5, 1);
+	cursor: pointer;
+	font-weight: bolder;
+	font-size: 12px;
+}
+
+.diceResult {
+	float: right;
+	clear: left;
+	margin-right: 5%;
+	margin-top: 40%;
+	background-color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+	width: 80px;
+	height: 42px;
+	text-align: center;
+	border-radius: 5px;
+	border: solid 1px #000;
+}
+
+
+.diceBoard .diceResult {
+	background-color: #fff;
+}
+
+.diceBoard .modifier {
+	clear: both;
+	width: 70px;
+	height: 15px;
+	margin: 1px;
+	opacity: 1;
+	font-weight: bold;
+}
+
+.diceBoard .delete {
+	margin-top: 1%;
+	margin-right: 1%;
+	opacity: 1;
+	padding: 2px;
+}
+
+.diceBoard .delete {
+	color: #fff;
+}
+
+.diceBoard .delete:hover {
+	color: #000;
+}

@@ -1,0 +1,39 @@
+#book {
+	height: 48px;
+	width: 48px;
+}
+
+#book:hover {
+	cursor: pointer;
+}
+
+.bookDiv {
+	height: 440px;
+	border: solid 1px #000;
+	border-radius: 5px;
+	background-image: url(../pic/misc/parchment.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 60%;
+}
+
+.bookDiv .delete {
+	margin-right: 30px;
+	margin-top: 15px;
+	background-color: rgb(255, 255, 255, 0);
+}
+
+
+.bookDiv .delete:hover {
+	color: #fff;
+}
+
+.bookFrame {
+	width: 90%;
+	height: 25em;
+	scale: 0.25;
+	margin-left: 2%;
+	margin-top: 2%;
+	background-color: #fff;
+}

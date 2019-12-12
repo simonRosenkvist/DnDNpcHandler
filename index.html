@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>D&D Enemy AI</title>
+	<meta charset="utf-8"> 
+	<!-- ### css file includes -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="css/dice.css">
+	<link rel="stylesheet" type="text/css" href="css/book.css">
+
+	<link rel="stylesheet" type="text/css" href="css/aarakocra.css">
+	<link rel="stylesheet" type="text/css" href="css/acolyte.css">
+	<link rel="stylesheet" type="text/css" href="css/ape.css">
+	<link rel="stylesheet" type="text/css" href="css/axeBeak.css">
+	<link rel="stylesheet" type="text/css" href="css/bandit.css">
+	<link rel="stylesheet" type="text/css" href="css/blinkDog.css">
+	<link rel="stylesheet" type="text/css" href="css/bloodHawk.css">
+	<link rel="stylesheet" type="text/css" href="css/boar.css">
+	<link rel="stylesheet" type="text/css" href="css/bullywug.css">
+	<link rel="stylesheet" type="text/css" href="css/camel.css">
+	<link rel="stylesheet" type="text/css" href="css/cockatrice.css">
+	<link rel="stylesheet" type="text/css" href="css/constrictorSnake.css">
+	<link rel="stylesheet" type="text/css" href="css/darkMantle.css">
+	<link rel="stylesheet" type="text/css" href="css/draftHorse.css">
+	<link rel="stylesheet" type="text/css" href="css/dretch.css">
+	<link rel="stylesheet" type="text/css" href="css/drow.css">
+	<link rel="stylesheet" type="text/css" href="css/dryad.css">
+	<link rel="stylesheet" type="text/css" href="css/duodrone.css">
+	<link rel="stylesheet" type="text/css" href="css/elk.css">
+	<link rel="stylesheet" type="text/css" href="css/flumph.css">
+	<link rel="stylesheet" type="text/css" href="css/flyingSnake.css">
+	<link rel="stylesheet" type="text/css" href="css/flyingSword.css">
+	<link rel="stylesheet" type="text/css" href="css/giantBadger.css">
+	<link rel="stylesheet" type="text/css" href="css/giantBat.css">
+	<link rel="stylesheet" type="text/css" href="css/giantCentipede.css">
+	<link rel="stylesheet" type="text/css" href="css/giantCrab.css">
+	<link rel="stylesheet" type="text/css" href="css/giantFrog.css">
+	<link rel="stylesheet" type="text/css" href="css/giantLizard.css">
+	<link rel="stylesheet" type="text/css" href="css/giantOwl.css">
+	<link rel="stylesheet" type="text/css" href="css/giantPoisonousSnake.css">
+	<link rel="stylesheet" type="text/css" href="css/giantRat.css">
+	<link rel="stylesheet" type="text/css" href="css/giantWeasel.css">
+	<link rel="stylesheet" type="text/css" href="css/giantWolfSpider.css">
+	<link rel="stylesheet" type="text/css" href="css/grayOoze.css">
+	<link rel="stylesheet" type="text/css" href="css/gnoll.css">
+	<link rel="stylesheet" type="text/css" href="css/goblin.css">
+	<link rel="stylesheet" type="text/css" href="css/grimlock.css">
+	<link rel="stylesheet" type="text/css" href="css/guard.css">
+	<link rel="stylesheet" type="text/css" href="css/hobgoblin.css">
+	<link rel="stylesheet" type="text/css" href="css/kenku.css">
+	<link rel="stylesheet" type="text/css" href="css/kobold.css">
+	<link rel="stylesheet" type="text/css" href="css/kuotoa.css">
+	<link rel="stylesheet" type="text/css" href="css/manes.css">
+	<link rel="stylesheet" type="text/css" href="css/mastiff.css">
+	<link rel="stylesheet" type="text/css" href="css/merfolk.css">
+	<link rel="stylesheet" type="text/css" href="css/monodrone.css">
+	<link rel="stylesheet" type="text/css" href="css/mudMephit.css">
+	<link rel="stylesheet" type="text/css" href="css/mule.css">
+	<link rel="stylesheet" type="text/css" href="css/needleBlight.css">
+	<link rel="stylesheet" type="text/css" href="css/noble.css">
+	<link rel="stylesheet" type="text/css" href="css/panther.css">
+	<link rel="stylesheet" type="text/css" href="css/pixie.css">
+	<link rel="stylesheet" type="text/css" href="css/poisonousSnake.css">
+	<link rel="stylesheet" type="text/css" href="css/pony.css">
+	<link rel="stylesheet" type="text/css" href="css/pseudodragon.css">
+	<link rel="stylesheet" type="text/css" href="css/pteranodon.css">
+	<link rel="stylesheet" type="text/css" href="css/ridingHorse.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="css/slaadTadpole.css">
+	<link rel="stylesheet" type="text/css" href="css/smokeMephit.css">
+	<link rel="stylesheet" type="text/css" href="css/sprite.css">
+	<link rel="stylesheet" type="text/css" href="css/steamMephit.css">
+	<link rel="stylesheet" type="text/css" href="css/stirge.css">
+	<link rel="stylesheet" type="text/css" href="css/swarmOfBats.css">
+	<link rel="stylesheet" type="text/css" href="css/swarmOfRats.css">
+	<link rel="stylesheet" type="text/css" href="css/swarmOfRavens.css">
+	<link rel="stylesheet" type="text/css" href="css/tribalWarrior.css">
+	<link rel="stylesheet" type="text/css" href="css/troglodyte.css">
+	<link rel="stylesheet" type="text/css" href="css/twigBlight.css">
+	<link rel="stylesheet" type="text/css" href="css/violetFungus.css">
+	<link rel="stylesheet" type="text/css" href="css/wingedKobold.css">
+	<link rel="stylesheet" type="text/css" href="css/wolf.css">
+	<link rel="stylesheet" type="text/css" href="css/zombie.css">
+
+	<!-- JavaScript includes -->
+	<!-- Dice -->
+	<script type="text/javascript" src="js/dice/TwentyDice.js"></script>
+	<script type="text/javascript" src="js/dice/TenDice.js"></script>
+	<script type="text/javascript" src="js/dice/EightDice.js"></script>
+	<script type="text/javascript" src="js/dice/SixDice.js"></script>
+	<script type="text/javascript" src="js/dice/FourDice.js"></script>
+
+	<!-- Structures -->
+	<script type="text/javascript" src="js/structure/Stats.js"></script>
+	<script type="text/javascript" src="js/structure/Notes.js"></script>
+	<script type="text/javascript" src="js/structure/DiceBoard.js"></script>
+	<script type="text/javascript" src="js/structure/Spellbook.js"></script>
+
+	<!-- Level 1/8 -->
+	<script type="text/javascript" src="js/eighthLevel/Bandit.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/BloodHawk.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Camel.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Flumph.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/FlyingSnake.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/GiantCrab.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/GiantRat.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/GiantWeasel.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Guard.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Kobold.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Manes.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Mastiff.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Merfolk.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Monodrone.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Mule.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Noble.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/PoisonousSnake.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Pony.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/SlaadTadpole.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/Stirge.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/TribalWarrior.js"></script>
+	<script type="text/javascript" src="js/eighthLevel/TwigBlight.js"></script>
+
+	<!-- Level 1/4 -->
+	<script type="text/javascript" src="js/quarterLevel/Acolyte.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Aarakocra.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/AxeBeak.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/BlinkDog.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Boar.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Bullywug.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/ConstrictorSnake.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/DraftHorse.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Dretch.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Drow.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Duodrone.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Elk.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/FlyingSword.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantBadger.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantBat.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantCentipede.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantFrog.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantLizard.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantOwl.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantPoisonousSnake.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/GiantWolfSpider.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Goblin.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Grimlock.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Kenku.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Kuotoa.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/MudMephit.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/NeedleBlight.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Panther.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Pixie.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Pseudodragon.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Pteranodon.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/RidingHorse.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Skeleton.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/SmokeMephit.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Sprite.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/SteamMephit.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/SwarmOfBats.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/SwarmOfRats.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/SwarmOfRavens.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Troglodyte.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/VioletFungus.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/WingedKobold.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Wolf.js"></script>
+	<script type="text/javascript" src="js/quarterLevel/Zombie.js"></script>
+
+	<!-- Level 1/2 -->
+	<script type="text/javascript" src="js/halfLevel/Ape.js"></script>
+	<script type="text/javascript" src="js/halfLevel/Cockatrice.js"></script>
+	<script type="text/javascript" src="js/halfLevel/DarkMantle.js"></script>
+	<script type="text/javascript" src="js/halfLevel/GrayOoze.js"></script>
+	<script type="text/javascript" src="js/halfLevel/Gnoll.js"></script>
+	<script type="text/javascript" src="js/halfLevel/Hobgoblin.js"></script>
+
+	<!-- Level 1 -->
+	<script type="text/javascript" src="js/oneLevel/Dryad.js"></script>
+
+	<!-- includes Main.js (last) -->
+	<script type="text/javascript" src="js/Main.js"></script>
+
+</head>
+<body>
+
+	<h1>
+		<img id="rollDice"src="pic/misc/diceIcon.png">
+		<img id="book" src="pic/misc/book.png">
+		NPC Handler 
+	</h1>
+	<form>
+		<input type="text" name="searchField" id="search" placeholder="NPC name">
+		<button type="button" name="searchBtn" id="searchButton">Search</button>
+	</form>
+	<div id="menu"> 
+		<span id="firstStackSpan" class="inactive">Level 1/8 - 2</span>
+		<span id="secondStackSpan" class="inactive">Level 3 - 7</span>
+
+		<br />
+	<ul id="firstStack">
+		
+		<ul id="eighth" class="hidden"> 1/8 Level
+			<li class="hidden" id="bandit"> Bandit </li>
+			<li class="hidden" id="bloodHawk"> Blood Hawk </li>
+			<li class="hidden" id="camel"> Camel </li>
+			<li class="hidden" id="flumph"> Flumph </li>
+			<li class="hidden" id="flyingSnake"> Flying Snake </li>
+			<li class="hidden" id="giantCrab"> Giant Crab </li>
+			<li class="hidden" id="giantRat"> Giant Rat </li>
+			<li class="hidden" id="giantWeasel"> Giant Weasel </li>
+			<li class="hidden" id="guard"> Guard </li>
+			<li class="hidden" id="kobold"> Kobold </li>
+			<li class="hidden" id="manes"> Manes </li>
+			<li class="hidden" id="mastiff"> Mastiff </li>
+			<li class="hidden" id="merfolk"> Merfolk </li>
+			<li class="hidden" id="monodrone"> Monodrone </li>
+			<li class="hidden" id="mule"> Mule </li>
+			<li class="hidden" id="noble"> Noble </li>
+			<li class="hidden" id="poisonousSnake"> Poisonous Snake </li>
+			<li class="hidden" id="pony"> Pony </li>
+			<li class="hidden" id="slaadTadpole"> Slaad Tadpole</li>
+			<li class="hidden" id="stirge"> Stirge </li>
+			<li class="hidden" id="tribalWarrior"> Tribal Warrior </li>
+			<li class="hidden" id="twigBlight"> Twig Blight </li>
+
+		</ul>
+
+		<ul id="quarter" class="hidden"> 1/4 Level
+		<li class="hidden" id="aarakocra"> Aarakocra </li>
+		<li class="hidden" id="acolyte"> Acolyte </li>
+		<li class="hidden" id="axeBeak"> Axe Beak </li>
+		<li class="hidden" id="blinkDog"> Blink Dog </li>
+		<li class="hidden" id="boar"> Boar </li>
+		<li class="hidden" id="bullywug"> Bullywug </li>
+		<li class="hidden" id="constrictorSnake"> Constrictor Snake </li>
+		<li class="hidden" id="draftHorse"> Draft Horse </li>
+		<li class="hidden" id="dretch"> Dretch </li>
+		<li class="hidden" id="drow"> Drow </li>
+		<li class="hidden" id="duodrone"> Duodrone </li>
+		<li class="hidden" id="elk"> Elk </li>
+		<li class="hidden" id="flyingSword"> Flying Sword </li>
+		<li class="hidden" id="giantBadger"> Giant Badger </li>
+		<li class="hidden" id="giantBat"> Giant Bat </li>
+		<li class="hidden" id="giantCentipede"> Giant Centipede </li>
+		<li class="hidden" id="giantFrog"> Giant Frog </li>
+		<li class="hidden" id="giantLizard"> Giant Lizard </li>
+		<li class="hidden" id="giantOwl"> Giant Owl</li>
+		<li class="hidden" id="giantPoisonousSnake"> Giant Poisonous Snake </li>
+		<li class="hidden" id="giantWolfSpider"> Giant Wolf Spider </li>
+		<li class="hidden" id="goblin"> Goblin </li>
+		<li class="hidden" id="grimlock"> Grimlock </li>
+		<li class="hidden" id="kenku"> Kenku </li>
+		<li class="hidden" id="kuotoa"> Kuo-Toa </li>
+		<li class="hidden" id="mudMephit"> Mud Mephit </li>
+		<li class="hidden" id="needleBlight"> Needle Blight</li>
+		<li class="hidden" id="panther"> Panther </li>
+		<li class="hidden" id="pixie"> Pixie </li>
+		<li class="hidden" id="pseudodragon"> Pseudodragon </li>
+		<li class="hidden" id="pteranodon"> Pteranodon </li>
+		<li class="hidden" id="ridingHorse"> Riding Horse </li>
+		<li class="hidden" id="skeleton"> Skeleton </li>
+		<li class="hidden" id="smokeMephit"> Smoke Mephit </li>
+		<li class="hidden" id="sprite"> Sprite </li>
+		<li class="hidden" id="steamMephit"> Steam Mephit </li>
+		<li class="hidden" id="swarmOfBats"> Swarm of Bats </li>
+		<li class="hidden" id="swarmOfRats"> Swarm of Rats </li>
+		<li class="hidden" id="swarmOfRavens"> Swarm of Ravens </li>
+		<li class="hidden" id="troglodyte"> Troglodyte </li>
+		<li class="hidden" id="violetFungus"> Violet Fungus </li>
+		<li class="hidden" id="wingedKobold"> Winged Kobold </li>
+		<li class="hidden" id="wolf"> Wolf </li>
+		<li class="hidden" id="zombie"> Zombie </li>
+		</ul>
+
+
+		<ul id="half" class="hidden"> 1/2 Level
+			<li class="hidden" id="cockatrice"> Cockatrice </li> 
+			<li class="hidden" id="darkMantle"> Dark Mantle </li> 
+			<li class="hidden" id="grayOoze"> Gray Ooze </li> 
+			<li class="hidden" id="gnoll"> Gnoll </li>
+			<li class="hidden" id="hobgoblin"> Hobgoblin </li> 
+			<li class="hidden" id="ape"> Ape </li>
+		</ul>
+
+		<ul id="one" class="hidden"> Level 1
+			<li class="hidden" id="dryad"> Dryad </li> 
+		</ul>
+
+		<ul id="two" class="hidden"> Level 2
+
+		</ul>
+
+	</ul><!-- //End first stack -->
+
+	<ul id="secondStack">
+
+		<ul id="three" class="hidden"> Level 3
+			
+		</ul>
+
+		<ul id="four" class="hidden"> Level 4
+			
+		</ul>
+
+		<ul id="five" class="hidden"> Level 5
+			
+		</ul>
+
+		<ul id="six" class="hidden"> Level 6
+			
+		</ul>
+
+		<ul id="seven" class="hidden"> Level 7
+			
+		</ul>
+
+
+		</ul> <!-- End second Stack -->
+	</div>
+
+<!-- ### Future html for up to level 30, making headers toggleable ###
+		
+		<br />
+
+
+		<ul id="nine"> Level Nine
+			
+		</ul>
+
+		<ul id="ten"> Level Ten
+			
+		</ul>
+
+-->
+	<div id="monsterList">
+		
+
+	</div>
+
+</body>
+</html>
